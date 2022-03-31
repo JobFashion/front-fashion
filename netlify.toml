@@ -1,0 +1,5 @@
+# This file is for fixing the React Router problem with netlify
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
