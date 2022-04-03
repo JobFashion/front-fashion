@@ -9,8 +9,11 @@ export function getAge(dateFromInput) {
   return age;
 }
 
+export const REGEX_MAIL = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
 const utils = {
-  getAge
+  getAge,
+  REGEX_MAIL
 }
 
 export default utils;

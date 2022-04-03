@@ -1,4 +1,4 @@
-export function Landing () {
+export default function Landing () {
   return (
     <>
       <h1>Hello fashion Like ideas</h1>

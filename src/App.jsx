@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Landing } from './pages/landing';
-import { Login } from './pages/login';
-import { Recovery } from './pages/recovery';
-import { Register } from './pages/register';
+import Landing from './pages/landing';
+import Login from './pages/login';
+import Recovery from './pages/recovery';
+import Register from './pages/register';
 
 export function App() {
   return (

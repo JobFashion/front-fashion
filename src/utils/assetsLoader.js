@@ -1,7 +1,7 @@
-import logo from '../assets/icons/logo.svg';
 import notOk from '../assets/icons/not_ok.svg';
 import ok from '../assets/icons/ok.svg';
 import warning from '../assets/icons/warning.svg';
+import logo from '../assets/icons/logo.svg';
 
 export const icons = {
   logo,
@@ -21,4 +21,4 @@ const assets = {
   icons
 }
 
-export default assets
+export default assets;
