@@ -45,12 +45,12 @@ function RegisterForm() {
       className="flex flex-col max-w-xs md:max-w-xl w-full mx-auto space-y-8 mt-8 md:space-y-12 md:mt-24"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-7 gap-x-10 md:gap-y-12">
-        <Input name="email" placeholder="Email" value="" setValue />
-        <Input name="email" placeholder="Email" value="" setValue />
-        <Input name="email" placeholder="Email" value="" setValue />
-        <Input name="email" placeholder="Email" value="" setValue />
-        <Input name="email" placeholder="Email" value="" setValue />
-        <Input name="email" placeholder="Email" value="" setValue />
+        <Input name="name" placeholder="Nombre" value="" setValue />
+        <Input name="surname" placeholder="Apellido" value="" setValue />
+        <Input name="email" placeholder="Email" value="" setValue={setEmail} />
+        <Input name="birthDate" placeholder="Fecha de Nacimiento" value="" setValue />
+        <Input name="password" placeholder="Contraseña" value="" setValue={setPassword} />
+        <Input name="repassword" placeholder="Confirmar contraseña" value="" setValue />
       </div>
       <div className="inline-flex justify-center">
         <button
