@@ -1,15 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Register as RegisterComponent } from '../components/ui/Register';
-import { icons } from '../utils/assetsLoader';
+
+// import { Register as RegisterComponent } from '../components/ui/Register';
+import RegisterForm from '../components/ui/RegisterForm';
+import Header from '../components/layout/Header';
 
 export default function Register() {
   return (
-    <div className='flex flex-col items-center justify-center px-6 py-4'>
-      <img className='self-start' alt='logo' src={icons.logo} />
-      <h2 className='my-5 font-bold text-2xl'>Registro</h2>
-      <RegisterComponent />
-      <small className='mt-1'><Link to='/'>Volver</Link></small>
-    </div>
+    <>
+      <Header subtitle="SÉ PARTE DE FASHION LIKE" />
+      <h2 className="text-[22px] font-semibold text-center mt-14 md:hidden">Registro</h2>
+      {/* <RegisterComponent /> */}
+      <RegisterForm />
+      <small className="block mt-4 text-xs text-center md:hidden mb-12">
+        <Link to="/">Volver</Link>
+      </small>
+    </>
   );
 }
