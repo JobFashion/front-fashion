@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 import Header from '../components/layout/Header';
 
+//TODO: No debe ser una pagina puede ser un componente a mostrar si resulta exitoso el registro
 export default function RegisterSuccess() {
   return (
     <>
       <Header />
-
       <div className="relative container mx-auto h-full">
         <div className="max-w-2xl mx-auto bg-[#FFF5DA] mt-20 pt-10 pb-6 px-10 border-[3px] space-y-8 border-[#FFBC0F] text-center">
           <h2 className="text-3xl font-bold">¡Tu registro ha sido exitoso!</h2>
@@ -26,9 +26,19 @@ export default function RegisterSuccess() {
             </Link>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 z-20  items-end justify-between hidden md:flex">
-          <img src="./images/register-success-2.png" width="286" alt="" />
-          <img src="./images/register-success-1.png" width="230" alt="" />
+        <div className="absolute bottom-0 left-0 z-10 items-end hidden md:flex">
+          <img
+            src="./images/low-register-success-2.png"
+            width="286"
+            alt="fashion chacket"
+          />
+        </div>
+        <div className="absolute bottom-0 right-0 z-10 items-end hidden md:flex">
+          <img
+            src="./images/low-register-success-1.png"
+            width="230"
+            alt="fashion woman"
+          />
         </div>
       </div>
     </>
