@@ -63,14 +63,20 @@ function RegisterForm() {
     onSubmit: (values, formikBag) => {
       const { repassword, ...dataBody } = values;
       formikBag.setSubmitting(true);
+      console.log('data ', dataBody);
       authUser(dataBody, 'register')
         .then((resp) => resp.json())
         .then((data) => {
           formikBag.setSubmitting(false);
           if (data?.status === 400 && data.message) {
-            formikBag.setFieldError('email', data.message);
+            if (data.message) {
+              formikBag.setFieldError('email', data.message);
+              return;
+            }
+            console.log(data.errors);
             return;
           }
+          console.log(data);
           navigate('/success');
         })
         .catch((err) => console.log(err));
