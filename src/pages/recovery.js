@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { authUser } from '../services/auth';
+import Spinner from '../components/icons/Spinner';
 
 import Header from '../components/layout/Header';
 import InputForm from '../components/ui/InputForm';
@@ -16,7 +16,7 @@ export default function Recovery() {
     setSubmitting(true);
     setTimeout(() => {
       setSubmitting(false);
-      setErrors('El Email no existe');
+      setErrors('Este servicio aun no esta disponible');
     }, 1500);
   };
 
@@ -47,7 +47,8 @@ export default function Recovery() {
             type="submit"
             className="w-full md:w-auto px-8 py-3 h-[50px] text-lg font-semibold text-white uppercase rounded-2xl md:rounded-[20px] md:py-1 md:h-[40px] bg-[#E063A3] hover:opacity-75 active:scale-95 transition-all disabled:opacity-50 disabled:pointer-events-none select-none"
           >
-            CONFIRMAR
+            <Spinner disabled={isSubmitting} />
+            <span>CONFIRMAR</span>
           </button>
         </div>
       </form>

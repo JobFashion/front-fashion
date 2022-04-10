@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-// import { Register as RegisterComponent } from '../components/ui/Register';
-// import RegisterForm from '../components/ui/RegisterForm';
 import RegisterFormik from '../components/ui/RegisterFormik';
 import Header from '../components/layout/Header';
 
@@ -11,14 +8,25 @@ export default function Register() {
     <>
       <Header subtitle="SÉ PARTE DE FASHION LIKE" />
       <h2 className="text-[22px] font-semibold text-center mt-14 md:hidden">Registro</h2>
-      {/* <RegisterComponent /> */}
-      {/* <RegisterForm /> */}
       <RegisterFormik />
-      <small className="block mt-4 text-xs text-center md:hidden mb-12">
-        <Link to="/" className="hover:opacity-75 transition-opacity">
-          Volver
-        </Link>
-      </small>
+      <div className="text-center mt-6 md:mt-8 font-medium text-xs md:text-sm space-y-3 md:space-y-5">
+        {/* <small className="block mt-4 text-xs text-center md:hidden mb-12">
+      </small> */}
+        <p className="md:hidden">
+          <Link to="/" className="hover:opacity-75 transition-opacity">
+            Volver
+          </Link>
+        </p>
+        <p>
+          ¿Tienes una cuenta?
+          <Link
+            to="/login"
+            className="text-[#E063A3] md:font-semibold ml-1 hover:opacity-75 transition-opacity"
+          >
+            Inicia Sesion aquí.
+          </Link>
+        </p>
+      </div>
     </>
   );
 }
