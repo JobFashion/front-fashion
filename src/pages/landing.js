@@ -1,15 +1,11 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import  logo from '../assets/icons/logo.svg';
 
-
-export function Landing() {
+export default function Landing () {
   return (
     <div className="flex flex-col items-center justify-center px-6 py-4">
       <Link to={'/'} className="mt-7 mb-6">
       <img src={logo} alt="logofashion" width="156px" />
-
-        
       </Link>
 
       <div className="order-1 lg:order-2">
