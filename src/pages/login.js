@@ -83,7 +83,7 @@ export default function Login() {
           </button>
         </div>
       </form>
-      <div className="text-center mt-6 md:mt-8 font-medium text-xs md:text-sm space-y-3 md:space-y-5">
+      <div className="text-center mt-6 md:mt-8 mb-10 font-medium text-xs md:text-sm space-y-3 md:space-y-5">
         <p>
           ¿Olvidaste tu contraseña?
           <Link

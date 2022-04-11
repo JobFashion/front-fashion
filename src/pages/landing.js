@@ -1,33 +1,170 @@
 import { Link } from 'react-router-dom';
-import  logo from '../assets/icons/logo.svg';
+import logo from '../assets/icons/logo.svg';
 
-export default function Landing () {
+function ButtonsAuth() {
   return (
-    <div className="flex flex-col items-center justify-center px-6 py-4">
-      <Link to={'/'} className="mt-7 mb-6">
-      <img src={logo} alt="logofashion" width="156px" />
+    <div className="hidden md:flex gap-4">
+      <Link
+        to="/register"
+        className="bg-[#E063A3] rounded-[20px] py-[6px] text-center px-6 uppercase font-semibold text-white border border-[#E063A3]"
+      >
+        Crear Cuenta
       </Link>
-
-      <div className="order-1 lg:order-2">
-        <h1 className="max-w-[170px] text-center text-[22px] leading-8 uppercase font-bold mx-auto mb-5">
-          ¡Te damos la bienvenida!
-        </h1>
-        <p className="text-sm leading-5 font-medium text-center mx-6 mb-8">
-          Somos la red social sobre moda más popular del momento. Estamos para brindarte
-          los mejores looks para que te veas siempre{' '}
-          <span className="text-[#860B3D] font-bold">genial</span>.
-        </p>
-      </div>
-      <div className="flex flex-col lg:flex-row gap-4 order-2 lg:order-1">
-        <button className="bg-[#E063A3] rounded-[20px] py-[6px] px-6 uppercase font-semibold text-white">
-          Registrarse
-        </button>
-        <button className="rounded-[20px] py-[6px] px-6 uppercase font-semibold text-[#E063A3] border border-[#E063A3]">
-          Iniciar Sesion
-        </button>
-      
-      </div>
+      <Link
+        to="/login"
+        className="rounded-[20px] py-[6px] px-6 uppercase font-semibold text-[#E063A3] border border-[#E063A3]"
+      >
+        Iniciar Sesion
+      </Link>
     </div>
   );
 }
 
+export default function Landing() {
+  return (
+    <>
+      <div className="flex items-center flex-col md:flex-row justify-between">
+        <div className="w-[156px] mt-[62px] md:w-[123px] md:mt-8">
+          <Link to="/">
+            <img src={logo} alt="firulasTop" width="156px" />
+          </Link>
+        </div>
+        <ButtonsAuth />
+      </div>
+
+      <div className="flex flex-col items-center justify-center px-6 pt-8 md:pt-16">
+        {/* <Link to={'/'} className="mt-7 mb-6">
+          <img src={logo} alt="logo fashion" width="156px" />
+        </Link> */}
+
+        {/* <div className="order-1 lg:order-2"> */}
+        <div className="">
+          <h1 className="max-w-[170px] md:max-w-xl text-center text-[22px] md:text-4xl leading-8 uppercase font-bold mx-auto mb-5 md:mb-7">
+            ¡Te damos la bienvenida!
+          </h1>
+          <p className="text-sm md:text-lg leading-5 font-medium text-center mx-0 md:mx-6 mb-8 max-w-xl">
+            Somos la red social sobre moda más popular del momento. Estamos para brindarte
+            los mejores looks para que te veas siempre{' '}
+            <span className="text-[#860B3D] font-bold">genial</span>.
+          </p>
+        </div>
+        {/* <div className="flex flex-col lg:flex-row gap-4 order-2 lg:order-1"> */}
+        <div className="flex flex-col md:hidden gap-4">
+          <Link
+            to="/register"
+            className="bg-[#E063A3] rounded-[20px] py-[6px] text-center px-6 uppercase font-semibold text-white border border-[#E063A3]"
+          >
+            Registrarse
+          </Link>
+          <Link
+            to="/login"
+            className="rounded-[20px] py-[6px] px-6 uppercase font-semibold text-[#E063A3] border border-[#E063A3]"
+          >
+            Iniciar Sesion
+          </Link>
+        </div>
+      </div>
+
+      <div className="hidden md:flex absolute bottom-0 left-0 right-0 z-10 items-end justify-items-stretch md:w-full">
+        <img
+          src="./images/low-landing-left-1.png"
+          className="z-20 absolute bottom-0 left-0 "
+          alt="fashion woman"
+          width={340}
+          loading="lazy"
+        />
+        <img
+          src="./images/low-landing-left-2.png"
+          alt="fashion man"
+          className="z-0 absolute bottom-0 left-[15%] -ml-[126px]"
+          width={252}
+          loading="lazy"
+        />
+        <img
+          src="./images/low-landing-left-3.png"
+          alt="fashion woman"
+          className="z-10 absolute bottom-0 left-[25%] -ml-[156px]"
+          width={366}
+          loading="lazy"
+        />
+        <img
+          src="./images/low-landing-left-4.png"
+          alt="fashion woman"
+          className="z-0 absolute bottom-0 left-[38%] -ml-[203px]"
+          width={407}
+          loading="lazy"
+        />
+        <img
+          src="./images/low-landing-center-desk.png"
+          alt="fashion woman"
+          className="z-20 absolute bottom-0 left-1/2 -ml-[132px] right-1/2"
+          width={264}
+          loading="lazy"
+        />
+        <img
+          src="./images/low-landing-right-1.png"
+          alt="fashion woman"
+          className="z-0 absolute bottom-0 right-[38%] -mr-[139px]"
+          width={278}
+          loading="lazy"
+        />
+        <img
+          src="./images/low-landing-right-2.png"
+          alt="fashion woman"
+          className="z-10 absolute bottom-0 right-[25%] -mr-[143px]"
+          width={287}
+          loading="lazy"
+        />
+        <img
+          src="./images/low-landing-right-3.png"
+          alt="fashion woman"
+          className="z-20 absolute bottom-0 right-[15%] -mr-[118px]"
+          width={237}
+          loading="lazy"
+        />
+        <img
+          src="./images/low-landing-right-4.png"
+          alt="fashion woman"
+          className="z-0 absolute bottom-0 right-0"
+          width={180}
+          loading="lazy"
+        />
+      </div>
+      {/* images for mobile */}
+      <div className="flex md:hidden absolute bottom-14 left-0 right-0 z-10 items-end justify-items-stretch md:w-full">
+        <img
+          src="./images/low-landing-1-mobile.png"
+          className="z-10 absolute bottom-0 left-0"
+          alt="fashion woman"
+          width={201}
+          loading="lazy"
+        />
+        <img
+          src="./images/low-landing-2-mobile.png"
+          alt="fashion man"
+          className="z-0 absolute bottom-0 left-[37%] -ml-[110px]"
+          width={219}
+          loading="lazy"
+        />
+        <img
+          src="./images/low-landing-3-mobile.png"
+          alt="fashion woman"
+          className="z-20 absolute bottom-0 right-[37%] -mr-[79px]"
+          width={158}
+          loading="lazy"
+        />
+        <img
+          src="./images/low-landing-4-mobile.png"
+          alt="fashion woman"
+          className="z-0 absolute bottom-0 right-0"
+          width={127}
+          loading="lazy"
+        />
+      </div>
+
+      <div className="absolute left-0 right-0 z-20  flex items-center justify-center bottom-[72px] h-[55px] md:h-12 text-xs md:text-xl font-black text-white text-center tracking-[0.25em] bg-opacity-70 bg-black">
+        <span className="w-52 md:w-auto">OLVIDA LAS REGLAS. SI TE GUSTA, ÚSALO.</span>
+      </div>
+    </>
+  );
+}
