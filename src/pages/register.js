@@ -9,7 +9,7 @@ export default function Register() {
       <Header subtitle="SÉ PARTE DE FASHION LIKE" />
       <h2 className="text-[22px] font-semibold text-center mt-14 md:hidden">Registro</h2>
       <RegisterFormik />
-      <div className="text-center mt-6 md:mt-8 font-medium text-xs md:text-sm space-y-3 md:space-y-5">
+      <div className="text-center mt-6 md:mt-8 font-medium text-xs md:text-sm space-y-3 md:space-y-5 mb-10">
         {/* <small className="block mt-4 text-xs text-center md:hidden mb-12">
       </small> */}
         <p className="md:hidden">
