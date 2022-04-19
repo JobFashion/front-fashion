@@ -55,8 +55,6 @@ const validate = (values) => {
   const passRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/gm; ///(?=.*[0-9])/;
   if (!values.password) {
     errors.password = forEmpty;
-  } else if (values.password.length < 8) {
-    errors.password = 'La contraseña debe tener al menos 8 caracteres';
   } else if (!passRegex.test(values.password)) {
     errors.password = 'Mínimo 8 caracteres, al menos una letra y un número';
   }
