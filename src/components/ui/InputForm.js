@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import warning from '../../assets/icons/warning.svg';
 import ok from '../../assets/icons/ok.svg';
 import not_ok from '../../assets/icons/not_ok.svg';
+import IconEye from '../icons/IconEye';
+import IconEyeOff from '../icons/IconEyeOff';
 
 function InputForm({
   name,
@@ -12,10 +15,12 @@ function InputForm({
   formikInput = false,
   formikCheck,
 }) {
+  const [show, setShow] = useState(false);
+
   const type = {
     email: 'email',
-    password: 'password',
-    repassword: 'password',
+    password: show ? 'text' : 'password',
+    repassword: show ? 'text' : 'password',
     birthDate: 'date',
   };
 
@@ -63,7 +68,14 @@ function InputForm({
             </div>
           )}
         </div>
-
+        {name === 'password' && (
+          <span
+            className="absolute top-[10px] right-3 cursor-pointer text-[#E063A3] hover:opacity-75 transition-opacity select-none"
+            onClick={() => setShow(!show)}
+          >
+            {show ? <IconEyeOff /> : <IconEye />}
+          </span>
+        )}
         {formikInput.touched[name] && formikInput.errors[name] ? (
           <p className="absolute -bottom-[18px] md:-bottom-5 left-2 text-[10px] font-light text-[#F0281D] flex items-center gap-1 w-full">
             <img src={warning} alt="incorrecto" className="inline-flex md:hidden" />

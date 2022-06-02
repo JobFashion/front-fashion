@@ -19,8 +19,8 @@ export function App() {
   return (
     <Routes>
       <Route element={<PuplicPage />}>
+        <Route path="/" element={<Landing />} />
         <Route element={<Layout />}>
-          <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/recovery" element={<Recovery />} />

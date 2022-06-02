@@ -4,7 +4,7 @@ import IconLinkedin from '../icons/IconLinkedin';
 
 function Footer() {
   return (
-    <footer className="relative bg-[#860B3D] text-white py-3 md:py-5 z-10 h-[72px]">
+    <footer className="relative bg-[#860B3D] text-white py-3 mt-auto md:py-5 z-10 h-[72px]">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-8 md:px-4">
         <nav className="hidden md:block">
           <ul className="flex gap-4">
@@ -55,7 +55,7 @@ function Footer() {
           </ul>
         </nav>
         <div className="md:hidden flex flex-col gap-1">
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center space-x-4 items-center">
             <Link to="/" className="hover:opacity-75 transition-opacity">
               <IconFacebook />
             </Link>
