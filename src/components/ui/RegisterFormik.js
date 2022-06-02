@@ -25,7 +25,7 @@ const validate = (values) => {
   if (!values.name) {
     errors.name = forEmpty;
   } else if (values.name.length > 25 || values.name.length < 3) {
-    errors.name = 'Debe contener entre 3 y 15 caracteres';
+    errors.name = 'Debe contener entre 3 y 25 caracteres';
   } else if (!stringAlpha.test(values.name)) {
     errors.name = 'Debe contener solo caracteres alfabéticos';
   }
@@ -33,7 +33,7 @@ const validate = (values) => {
   if (!values.surname) {
     errors.surname = forEmpty;
   } else if (values.surname.length > 25 || values.surname.length < 3) {
-    errors.surname = 'Debe contener entre 3 y 15 caracteres';
+    errors.surname = 'Debe contener entre 3 y 25 caracteres';
   } else if (!stringAlpha.test(values.surname)) {
     errors.surname = 'Debe contener solo caracteres alfabéticos';
   }
@@ -48,15 +48,15 @@ const validate = (values) => {
     errors.birthDate = forEmpty;
   } else if (getAge(values.birthDate) < 18) {
     errors.birthDate = 'Debes ser mayor de edad para registrarte';
-  } else if (getAge(values.birthDate) > 81) {
+  } else if (getAge(values.birthDate) > 80) {
     errors.birthDate = 'Se requiere una edad menor o igual a 80 años';
   }
 
-  const passRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/gm; ///(?=.*[0-9])/;
+  const passRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,15}$/gm; ///(?=.*[0-9])/;
   if (!values.password) {
     errors.password = forEmpty;
   } else if (!passRegex.test(values.password)) {
-    errors.password = 'Mínimo 8 caracteres, al menos una letra y un número';
+    errors.password = 'Entre 8 y 15 caracteres, al menos una letra y un número';
   }
 
   if (values.password && values.repassword) {
@@ -71,9 +71,7 @@ const validate = (values) => {
 function RegisterForm() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { user, isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.auth
-  );
+  const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth);
 
   const formik = useFormik({
     initialValues: {
@@ -116,18 +114,9 @@ function RegisterForm() {
           <InputForm name="name" placeholder="Nombre" formikInput={formik} />
           <InputForm name="surname" placeholder="Apellido" formikInput={formik} />
           <InputForm name="email" placeholder="Email" formikInput={formik} />
-          <InputForm
-            name="birthDate"
-            placeholder="Fecha de Nacimiento"
-            formikInput={formik}
-          />
+          <InputForm name="birthDate" placeholder="Fecha de Nacimiento" formikInput={formik} />
           <InputForm name="password" placeholder="Contraseña" formikInput={formik} />
-          <InputForm
-            name="repassword"
-            placeholder="Confirmar contraseña"
-            formikInput={formik}
-            formikCheck
-          />
+          <InputForm name="repassword" placeholder="Confirmar contraseña" formikInput={formik} formikCheck />
         </div>
         <div className="inline-flex justify-center">
           <button
