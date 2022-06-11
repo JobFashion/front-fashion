@@ -33,6 +33,7 @@ export function App() {
       </Route>
       <Route element={<ProtectedPage />}>
         <Route element={<PrivateLayout />}>
+          {/* General */}
           <Route path="/home" element={<Home />} />
           <Route path="/profile/:name" element={<Profile />} />
           <Route path="/buy" element={<Buy />} />
