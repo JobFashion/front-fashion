@@ -10,6 +10,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.active > div {
+  @apply border-black text-black;
+}
+.headers-link > li:not(:first-child):not(:last-child):after {
+  position: absolute;
+  content: '|';
+  left: 0;
+  top: 55%;
+}
+.headers-link > li > a:active > div {
+  @apply scale-95 transform transition-transform;
+}
+
+.headers-link a:hover > div {
+  @apply text-black;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;

@@ -5,3 +5,7 @@ export { default as Login } from './login';
 export { default as Register } from './register';
 export { default as Recovery } from './recovery';
 export { default as Landing } from './landing';
+export { default as Buy } from './Buy';
+export { default as Favorites } from './Favorites';
+export { default as New } from './New';
+export { default as Notifications } from './Notifications';
