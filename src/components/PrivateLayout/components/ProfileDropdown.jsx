@@ -13,9 +13,14 @@ function ProfileDropdown({ action }) {
     <>
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="pt-3 px-5">
-            <span className="bg-[#E9E8E8] border border-transparent rounded-full flex items-center justify-center p-2 h-10 w-10 hover:border-black hover:bg-[rgba(217, 216, 216, 0.75)] transition-colors">
-              <IconProfile />
+          <Menu.Button className="pt-2 md:pt-3 md:px-5">
+            <span className="bg-[#E9E8E8] border border-transparent rounded-full flex items-center justify-center h-6 w-6 md:h-10 md:w-10 hover:border-black hover:bg-[rgba(217, 216, 216, 0.75)] transition-colors overflow-hidden">
+              {/* <IconProfile /> */}
+              <img
+                src="https://cdn.pixabay.com/photo/2021/03/03/08/56/woman-6064819__340.jpg"
+                className="w-full h-full object-fill"
+                alt=""
+              />
             </span>
           </Menu.Button>
         </div>
@@ -28,11 +33,11 @@ function ProfileDropdown({ action }) {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 mt-6 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-0 mt-3 md:mt-10 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1">
               <Menu.Item>
                 <Link
-                  to="/profile"
+                  to="/profile/me"
                   className="hover:bg-[#E9E8E8] text-[#887675] group flex w-full items-center rounded-md px-2 py-2 text-xs"
                 >
                   <IconUser className="mr-2 h-5 w-5" aria-hidden="true" /> Perfil
@@ -40,7 +45,7 @@ function ProfileDropdown({ action }) {
               </Menu.Item>
               <Menu.Item>
                 <Link
-                  to="/profile"
+                  to="/settings"
                   className="hover:bg-[#E9E8E8] text-[#887675] group flex w-full items-center rounded-md px-2 py-2 text-xs"
                 >
                   <IconCog className="mr-2 h-5 w-5" aria-hidden="true" />
@@ -49,7 +54,7 @@ function ProfileDropdown({ action }) {
               </Menu.Item>
               <Menu.Item>
                 <Link
-                  to="/profile"
+                  to="/change"
                   className="hover:bg-[#E9E8E8] text-[#887675] group flex w-full items-center rounded-md px-2 py-2 text-xs"
                 >
                   <IconReload className="mr-2 h-5 w-5" aria-hidden="true" />
