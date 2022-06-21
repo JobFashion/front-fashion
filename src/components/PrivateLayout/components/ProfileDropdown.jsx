@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Transition } from '@headlessui/react';
 
-import IconProfile from '../../icons/IconProfile';
+// import IconProfile from '../../icons/IconProfile';
 import IconUser from '../../icons/IconUser';
 import IconCog from '../../icons/IconCog';
 import IconReload from '../../icons/IconReload';
