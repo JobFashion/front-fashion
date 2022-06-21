@@ -8,14 +8,14 @@ import { users } from '../services/dataMock';
 import { getPosts } from '../store/post/postSlice';
 
 function Home() {
-  const { loading, posts, error } = useSelector((state) => state.post);
+  const { loading, posts } = useSelector((state) => state.post);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getPosts());
   }, [dispatch]);
 
-  console.log(loading, posts, error);
+  // console.log(loading, posts, error);
   if (loading) {
     return <div className="block text-center mt-12">Cargando...</div>;
   }
