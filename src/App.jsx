@@ -13,6 +13,10 @@ import {
   RegisterSuccess,
   Recovery,
   Register,
+  Buy,
+  Favorites,
+  New,
+  Notifications,
 } from './pages';
 
 export function App() {
@@ -29,8 +33,15 @@ export function App() {
       </Route>
       <Route element={<ProtectedPage />}>
         <Route element={<PrivateLayout />}>
+          {/* General */}
           <Route path="/home" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/:name" element={<Profile />} />
+          <Route path="/shop" element={<Buy />} />
+          {/* Personal user */}
+          <Route path="/new" element={<New />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="*" element={<Home />} />
         </Route>
       </Route>
     </Routes>
