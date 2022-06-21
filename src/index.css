@@ -30,3 +30,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.footerMobile .active {
+  color: #1b1616 !important;
+}
+
+.liked svg {
+  @apply fill-pink-500 stroke-white;
+}
