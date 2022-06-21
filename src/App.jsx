@@ -36,11 +36,12 @@ export function App() {
           {/* General */}
           <Route path="/home" element={<Home />} />
           <Route path="/profile/:name" element={<Profile />} />
-          <Route path="/buy" element={<Buy />} />
+          <Route path="/shop" element={<Buy />} />
           {/* Personal user */}
           <Route path="/new" element={<New />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="*" element={<Home />} />
         </Route>
       </Route>
     </Routes>
