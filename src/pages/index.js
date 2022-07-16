@@ -9,3 +9,7 @@ export { default as Buy } from './Buy';
 export { default as Favorites } from './Favorites';
 export { default as New } from './New';
 export { default as Notifications } from './Notifications';
+export { default as About } from './About';
+export { default as Privacy } from './Privacy';
+export { default as Terms } from './Terms';
+export { default as Contact } from './Contact';

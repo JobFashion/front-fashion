@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+
 import Layout from './components/layout';
 import PrivateLayout from './components/PrivateLayout';
 
@@ -17,6 +18,10 @@ import {
   Favorites,
   New,
   Notifications,
+  About,
+  Privacy,
+  Terms,
+  Contact,
 } from './pages';
 
 export function App() {
@@ -29,6 +34,10 @@ export function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/recovery" element={<Recovery />} />
           <Route path="/success" element={<RegisterSuccess />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Route>
       <Route element={<ProtectedPage />}>
