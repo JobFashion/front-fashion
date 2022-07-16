@@ -4,7 +4,6 @@ import Footer from '../components/layout/Footer';
 
 function ButtonsAuth(props) {
   return (
-    // <div className="flex flex-col md:hidden gap-4">
     <div className="hidden md:flex gap-4" {...props}>
       <Link
         to="/register"
@@ -26,7 +25,7 @@ export default function Landing() {
   return (
     <>
       <div className="flex flex-col h-screen">
-        <div className="h-full relative flex flex-col flex-1">
+        <div className="relative flex flex-col flex-1">
           <div className="container mx-auto px-6 md:px-4 flex items-center flex-col md:flex-row justify-between">
             <div className="w-[156px] mt-[62px] md:w-[123px] md:mt-8">
               <Link to="/">
@@ -36,22 +35,21 @@ export default function Landing() {
             <ButtonsAuth />
           </div>
 
-          <div className="min-h-[575px] md:min-h-0 h-full pb-[352px] flex flex-col items-center md:justify-center px-6 pt-8 md:pt-16">
-            <div className="">
+          <div className="min-h-[575px] md:min-h-0 flex flex-col items-start md:justify-center px-6 pt-8 md:pt-16">
+            <div className="mx-auto">
               <h1 className="max-w-[170px] md:max-w-xl text-center text-[22px] md:text-4xl leading-8 uppercase font-bold mx-auto mb-5 md:mb-7">
                 ¡Te damos la bienvenida!
               </h1>
-              <p className="text-sm md:text-lg leading-5 font-medium text-center mx-0 md:mx-6 mb-8 max-w-xl">
-                Somos la red social sobre moda más popular del momento. Estamos para
-                brindarte los mejores looks para que te veas siempre{' '}
-                <span className="text-[#860B3D] font-bold">genial</span>.
+              <p className="text-sm md:text-lg leading-5 font-medium text-center md:mx-6 mb-8 max-w-xl mx-auto">
+                Somos la red social sobre moda más popular del momento. Estamos para brindarte los mejores looks para
+                que te veas siempre <span className="text-[#860B3D] font-bold">genial</span>.
               </p>
             </div>
-            <ButtonsAuth className="flex flex-col md:hidden gap-4" />
+            <ButtonsAuth className="flex flex-col md:hidden gap-4 mx-auto" />
           </div>
 
           {/* line desktop */}
-          <div className="hidden md:flex absolute -bottom-32 left-0 right-0 z-10 items-end justify-items-stretch md:w-full">
+          <div className="hidden md:flex absolute -bottom-16 left-0 right-0 z-10 items-end justify-items-stretch md:w-full">
             <img
               src="./images/low-landing-left-1.png"
               className="z-20 absolute bottom-0 left-0 "

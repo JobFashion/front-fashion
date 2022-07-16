@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+
 import Card from '../components/Card';
 import IconFacebook from '../components/icons/IconFacebook';
 import IconLinkedin from '../components/icons/IconLinkedin';
+
 import { users } from '../services/dataMock';
 import { getPosts } from '../store/post/postSlice';
 
@@ -15,7 +17,6 @@ function Home() {
     dispatch(getPosts());
   }, [dispatch]);
 
-  // console.log(loading, posts, error);
   if (loading) {
     return <div className="block text-center mt-12">Cargando...</div>;
   }
