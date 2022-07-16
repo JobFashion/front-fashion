@@ -9,29 +9,29 @@ function Footer() {
         <nav className="hidden md:block">
           <ul className="flex gap-4">
             <li className="relative font-semibold text-xs uppercase after:absolute after:h-3 after:w-[1px] after:top-[2px] after:-right-2 after:bg-white">
-              <a href="#ss" className="hover:opacity-75 py-2 transition-opacity">
+              <Link to="/contact" className="hover:opacity-75 py-2 transition-opacity">
                 contacto
-              </a>
+              </Link>
             </li>
             <li className="relative font-semibold text-xs uppercase after:absolute after:h-3 after:w-[1px] after:top-[2px] after:-right-2 after:bg-white">
-              <a href="#ss" className="hover:opacity-75 py-2 transition-opacity">
+              <Link to="/terms" className="hover:opacity-75 py-2 transition-opacity">
                 terminos y condiciones
-              </a>
+              </Link>
             </li>
             <li className="relative font-semibold text-xs uppercase after:absolute after:h-3 after:w-[1px] after:top-[2px] after:-right-2 after:bg-white">
-              <a href="#ss" className="hover:opacity-75 py-2 transition-opacity">
+              <Link to="/privacy" className="hover:opacity-75 py-2 transition-opacity">
                 privacidad
-              </a>
+              </Link>
             </li>
             <li className="relative font-semibold text-xs uppercase">
-              <a href="#ss" className="hover:opacity-75 py-2 transition-opacity">
+              <Link to="/about" className="hover:opacity-75 py-2 transition-opacity">
                 ¿Quienes somos?
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
         <div className="hidden md:flex items-center justify-end gap-4">
-          <p className="relative font-semibold text-xs uppercase">© 2022. fashion like</p>
+          <p className="relative font-semibold text-xs uppercase">© 2021-{new Date().getFullYear()}. fashion like</p>
           <Link to="/" className="hover:opacity-75 transition-opacity">
             <IconFacebook />
           </Link>
@@ -43,14 +43,14 @@ function Footer() {
         <nav className="block md:hidden  w-full">
           <ul className="flex items-center justify-between">
             <li className="relative font-semibold text-[10px] uppercase">
-              <a href="#ss" className="hover:opacity-75 py-2 transition-opacity">
+              <Link to="/privacy" className="hover:opacity-75 py-2 transition-opacity">
                 privacidad
-              </a>
+              </Link>
             </li>
             <li className="relative font-semibold text-[10px] uppercase">
-              <a href="#ss" className="hover:opacity-75 py-2 transition-opacity">
+              <Link to="/contact" className="hover:opacity-75 py-2 transition-opacity">
                 contacto
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -63,9 +63,7 @@ function Footer() {
               <IconLinkedin />
             </Link>
           </div>
-          <p className="relative font-semibold text-[8px] uppercase">
-            © 2022. fashion like
-          </p>
+          <p className="relative font-semibold text-[8px] uppercase">© 2021-{new Date().getFullYear()}. fashion like</p>
         </div>
       </div>
     </footer>
