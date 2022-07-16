@@ -37,6 +37,7 @@ export const setInterceptors = (store) => {
       // console.log('error interceptado -> error', store.getState());
       if (err.response.status === 401 || err.response.data.message === '401 Unauthorized') {
         // console.log('no autorizado');
+
         store.dispatch(logout());
       }
       if (err.response.status === 403) {

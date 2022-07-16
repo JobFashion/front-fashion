@@ -1,8 +1,4 @@
 import { myAxios } from '../services/interceptorsMiddleware';
-/**
- * All calls to api
- */
-
 // posts
 export const fetchPost = (id) => myAxios.get(`/posts/${id}`);
 export const fetchPosts = (page) => myAxios.get(`/posts?page=${page}`);
