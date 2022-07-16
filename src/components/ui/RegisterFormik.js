@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { useSelector, useDispatch } from 'react-redux';
@@ -5,23 +6,13 @@ import { register, reset } from '../../store/auth/authSlice';
 
 import InputForm from './InputForm';
 import Spinner from '../icons/Spinner';
-import { useEffect } from 'react';
-
-function getAge(dateFromInput) {
-  const today = new Date();
-  const birthDate = new Date(dateFromInput);
-  let age = today.getFullYear() - birthDate.getFullYear();
-  const m = today.getMonth() - birthDate.getMonth();
-  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) age--;
-  return age;
-}
+import { getAge } from '../../utils/utils';
 
 const validate = (values) => {
   const errors = {};
   // similares
   const forEmpty = 'Necesitamos que completes este campo';
-
-  const stringAlpha = /^[a-zA-Z ]+$/; ///[A-Za-z\s]*/
+  const stringAlpha = /^[a-zA-ZÀ-ÖØ-öø-ÿ ]+$/;
   if (!values.name) {
     errors.name = forEmpty;
   } else if (values.name.length > 25 || values.name.length < 3) {
@@ -98,7 +89,6 @@ function RegisterForm() {
     if (isSuccess || user) {
       navigate('/home');
     }
-
     dispatch(reset());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, isError, isSuccess, message, navigate, dispatch]);
