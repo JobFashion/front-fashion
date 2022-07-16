@@ -13,7 +13,7 @@ body {
 .active > div {
   @apply border-black text-black;
 }
-.headers-link > li:not(:first-child):not(:last-child):after {
+.headers-link > li:not(:first-child):after {
   position: absolute;
   content: '|';
   left: 0;
