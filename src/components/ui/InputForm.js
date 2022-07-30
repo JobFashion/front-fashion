@@ -5,16 +5,7 @@ import not_ok from '../../assets/icons/not_ok.svg';
 import IconEye from '../icons/IconEye';
 import IconEyeOff from '../icons/IconEyeOff';
 
-function InputForm({
-  name,
-  placeholder,
-  value,
-  setValue,
-  required,
-  errors,
-  formikInput = false,
-  formikCheck,
-}) {
+function InputForm({ name, placeholder, value, setValue, required, errors, formikInput = false, formikCheck }) {
   const [show, setShow] = useState(false);
 
   const type = {
@@ -26,17 +17,9 @@ function InputForm({
 
   if (formikInput) {
     const iconRePass = () => {
-      if (
-        !formikInput.errors.repassword &&
-        formikInput.values.repassword &&
-        formikInput.values.password
-      ) {
+      if (!formikInput.errors.repassword && formikInput.values.repassword && formikInput.values.password) {
         return ok;
-      } else if (
-        formikInput.errors.repassword &&
-        formikInput.values.repassword &&
-        formikInput.values.password
-      ) {
+      } else if (formikInput.errors.repassword && formikInput.values.repassword && formikInput.values.password) {
         return not_ok;
       } else {
         return null;
@@ -57,10 +40,8 @@ function InputForm({
             placeholder={placeholder}
             {...formikInput.getFieldProps(name)}
             className={`w-full px-4 py-3 h-[45px] font-normal rounded-2xl md:rounded-lg border ${
-              formikInput.touched[name] && formikInput.errors[name]
-                ? 'border-[#F0281D]'
-                : 'border-[#887675]'
-            } focus:outline-none focus:ring-2  focus:ring-[#E063A3] focus:border-[#E063A3] placeholder:text-slate-400`}
+              formikInput.touched[name] && formikInput.errors[name] ? 'border-third-rojo' : 'border-secondary-sombra'
+            } focus:outline-none focus:ring-2  focus:ring-main-rosa focus:border-main-rosa placeholder:text-slate-400`}
           />
           {formikCheck && iconRePass() && (
             <div className="absolute top-4 right-3">
@@ -70,18 +51,16 @@ function InputForm({
         </div>
         {name === 'password' && (
           <span
-            className="absolute top-[10px] right-3 cursor-pointer text-[#E063A3] hover:opacity-75 transition-opacity select-none"
+            className="absolute top-[10px] right-3 cursor-pointer text-main-rosa hover:opacity-75 transition-opacity select-none"
             onClick={() => setShow(!show)}
           >
             {show ? <IconEyeOff /> : <IconEye />}
           </span>
         )}
         {formikInput.touched[name] && formikInput.errors[name] ? (
-          <p className="absolute -bottom-[18px] md:-bottom-5 left-2 text-[10px] font-light text-[#F0281D] flex items-center gap-1 w-full">
+          <p className="absolute -bottom-[18px] md:-bottom-5 left-2 text-[10px] font-light text-third-rojo flex items-center gap-1 w-full">
             <img src={warning} alt="incorrecto" className="inline-flex md:hidden" />
-            <span className="overflow-hidden overflow-ellipsis whitespace-nowrap">
-              {formikInput.errors[name]}
-            </span>
+            <span className="overflow-hidden overflow-ellipsis whitespace-nowrap">{formikInput.errors[name]}</span>
           </p>
         ) : null}
       </div>
@@ -112,11 +91,11 @@ function InputForm({
         placeholder={placeholder}
         onChange={(e) => setValue(e.target.value)}
         className={`w-full px-4 py-3 h-[45px] font-normal rounded-2xl md:rounded-lg border ${
-          err ? 'border-[#F0281D]' : 'border-[#887675]'
-        } focus:outline-none focus:ring-2  focus:ring-[#E063A3] focus:border-[#E063A3]`}
+          err ? 'border-third-rojo' : 'border-secondary-sombra'
+        } focus:outline-none focus:ring-2  focus:ring-main-rosa focus:border-main-rosa`}
       />
       {err && (
-        <p className="absolute -bottom-[18px] md:-bottom-5 left-2 text-[10px] font-light text-[#F0281D] flex items-center gap-1 w-full">
+        <p className="absolute -bottom-[18px] md:-bottom-5 left-2 text-[10px] font-light text-thrborder-third-rojo flex items-center gap-1 w-full">
           <img src={warning} alt="incorrecto" className="inline-flex md:hidden" />
           <span className="overflow-hidden overflow-ellipsis whitespace-nowrap">
             {err ? err : 'Este campo es obligatorio'}
