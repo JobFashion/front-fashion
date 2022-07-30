@@ -22,6 +22,7 @@ import {
   Privacy,
   Terms,
   Contact,
+  Settings,
 } from './pages';
 
 export function App() {
@@ -50,6 +51,7 @@ export function App() {
           <Route path="/new" element={<New />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<Home />} />
         </Route>
       </Route>

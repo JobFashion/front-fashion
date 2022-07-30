@@ -1,4 +1,4 @@
-export { default as Home } from './Home';
+export { default as Home } from './Home/Home';
 export { default as Profile } from './Profile';
 export { default as RegisterSuccess } from './RegisterSuccess';
 export { default as Login } from './login';
@@ -13,3 +13,4 @@ export { default as About } from './About';
 export { default as Privacy } from './Privacy';
 export { default as Terms } from './Terms';
 export { default as Contact } from './Contact';
+export { default as Settings } from './Settings/Settings';
