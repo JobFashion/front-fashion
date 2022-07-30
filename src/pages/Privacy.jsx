@@ -45,7 +45,7 @@ export default function Privacy() {
 
         <h4 className="my-2 font-bold">Responsible for the processing of your personal data</h4>
 
-        <blockquote class="bg-slate-50 p-4 m-4 rounded-lg">
+        <blockquote className="bg-slate-50 p-4 m-4 rounded-lg">
           <p className="mb-4">
             Identidad del Responsable: FashionLike S.L.
             <br />

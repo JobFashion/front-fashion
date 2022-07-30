@@ -19,10 +19,7 @@ export default function Register() {
         </p>
         <p>
           ¿Tienes una cuenta?
-          <Link
-            to="/login"
-            className="text-[#E063A3] md:font-semibold ml-1 hover:opacity-75 transition-opacity"
-          >
+          <Link to="/login" className="text-main-rosa md:font-semibold ml-1 hover:opacity-75 transition-opacity">
             Inicia Sesion aquí.
           </Link>
         </p>

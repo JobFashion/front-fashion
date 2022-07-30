@@ -23,29 +23,20 @@ export default function Recovery() {
   return (
     <>
       <Header />
-      <h2 className="text-[22px] font-semibold text-center mt-14">
-        Recuperación de contraseña
-      </h2>
+      <h2 className="text-[22px] font-semibold text-center mt-14">Recuperación de contraseña</h2>
       <p className="max-w-xs md:max-w-none mx-auto text-sm mt-6 text-center">
-        Te enviaremos un link a tu email para que puedas cambiar tu contraseña e iniciar
-        sesión.
+        Te enviaremos un link a tu email para que puedas cambiar tu contraseña e iniciar sesión.
       </p>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col max-w-xs w-full mx-auto space-y-8 md:space-y-12 mt-6 md:mt-12"
       >
-        <InputForm
-          name="email"
-          placeholder="Email"
-          value={email}
-          setValue={setEmail}
-          errors={errors}
-        />
+        <InputForm name="email" placeholder="Email" value={email} setValue={setEmail} errors={errors} />
         <div className="inline-flex justify-center">
           <button
             disabled={isSubmitting}
             type="submit"
-            className="w-full md:w-auto px-8 py-3 h-[50px] text-lg font-semibold text-white uppercase rounded-2xl md:rounded-[20px] md:py-1 md:h-[40px] bg-[#E063A3] hover:opacity-75 active:scale-95 transition-all disabled:opacity-50 disabled:pointer-events-none select-none"
+            className="w-full md:w-auto px-8 py-3 h-[50px] text-lg font-semibold text-white uppercase rounded-2xl md:rounded-[20px] md:py-1 md:h-[40px] bg-main-rosa hover:opacity-75 active:scale-95 transition-all disabled:opacity-50 disabled:pointer-events-none select-none"
           >
             <Spinner disabled={isSubmitting} />
             <span>CONFIRMAR</span>
