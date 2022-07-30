@@ -29,9 +29,7 @@ const validate = (values) => {
 export default function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { user, isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.auth
-  );
+  const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth);
 
   const formik = useFormik({
     initialValues: {
@@ -62,9 +60,7 @@ export default function Login() {
   return (
     <>
       <Header subtitle="no te pierdas el look del día" />
-      <h2 className="text-[22px] font-semibold text-center mt-14 md:hidden">
-        Iniciar sesión
-      </h2>
+      <h2 className="text-[22px] font-semibold text-center mt-14 md:hidden">Iniciar sesión</h2>
       <form
         onSubmit={formik.handleSubmit}
         className="flex flex-col max-w-xs w-full mx-auto space-y-8 md:space-y-12 mt-12 md:mt-24"
@@ -76,7 +72,7 @@ export default function Login() {
           <button
             disabled={!formik.isValid || isLoading}
             type="submit"
-            className="w-full md:w-auto px-8 py-3 h-[50px] text-lg font-semibold text-white uppercase rounded-2xl md:rounded-[20px] md:py-1 md:h-[40px] bg-[#E063A3] hover:opacity-75 active:scale-95 transition-all disabled:opacity-50 disabled:pointer-events-none select-none"
+            className="w-full md:w-auto px-8 py-3 h-[50px] text-lg font-semibold text-white uppercase rounded-2xl md:rounded-[20px] md:py-1 md:h-[40px] bg-main-rosa hover:opacity-75 active:scale-95 transition-all disabled:opacity-50 disabled:pointer-events-none select-none"
           >
             <Spinner disabled={isLoading} />
             <span>Iniciar Sesión</span>
@@ -86,19 +82,13 @@ export default function Login() {
       <div className="text-center mt-6 md:mt-8 mb-10 font-medium text-xs md:text-sm space-y-3 md:space-y-5">
         <p>
           ¿Olvidaste tu contraseña?
-          <Link
-            to="/recovery"
-            className="text-[#E063A3] md:font-semibold ml-1 hover:opacity-75 transition-opacity"
-          >
+          <Link to="/recovery" className="text-main-rosa md:font-semibold ml-1 hover:opacity-75 transition-opacity">
             Ingresá aquí.
           </Link>
         </p>
         <p>
           ¿No tienes una cuenta?
-          <Link
-            to="/register"
-            className="text-[#E063A3] md:font-semibold ml-1 hover:opacity-75 transition-opacity"
-          >
+          <Link to="/register" className="text-main-rosa md:font-semibold ml-1 hover:opacity-75 transition-opacity">
             Registrate aquí.
           </Link>
         </p>

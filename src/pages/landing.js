@@ -7,13 +7,13 @@ function ButtonsAuth(props) {
     <div className="hidden md:flex gap-4" {...props}>
       <Link
         to="/register"
-        className="bg-[#E063A3] rounded-[20px] py-[6px] text-center px-6 uppercase font-semibold text-white border border-[#E063A3]"
+        className="bg-main-rosa rounded-[20px] py-[6px] text-center px-6 uppercase font-semibold text-white border border-main-rosa"
       >
         Crear Cuenta
       </Link>
       <Link
         to="/login"
-        className="rounded-[20px] py-[6px] px-6 uppercase font-semibold text-[#E063A3] border border-[#E063A3]"
+        className="rounded-[20px] py-[6px] px-6 uppercase font-semibold text-main-rosa border border-main-rosa"
       >
         Iniciar Sesion
       </Link>
@@ -42,14 +42,14 @@ export default function Landing() {
               </h1>
               <p className="text-sm md:text-lg leading-5 font-medium text-center md:mx-6 mb-8 max-w-xl mx-auto">
                 Somos la red social sobre moda más popular del momento. Estamos para brindarte los mejores looks para
-                que te veas siempre <span className="text-[#860B3D] font-bold">genial</span>.
+                que te veas siempre <span className="text-secondary-bordo font-bold">genial</span>.
               </p>
             </div>
             <ButtonsAuth className="flex flex-col md:hidden gap-4 mx-auto" />
           </div>
 
           {/* line desktop */}
-          <div className="hidden md:flex absolute -bottom-16 left-0 right-0 z-10 items-end justify-items-stretch md:w-full">
+          <div className="hidden md:flex absolute -bottom-16 left-0 right-0 z-10 items-end justify-items-stretch md:w-full images-responsive">
             <img
               src="./images/low-landing-left-1.png"
               className="z-20 absolute bottom-0 left-0 "

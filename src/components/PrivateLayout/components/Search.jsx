@@ -8,13 +8,13 @@ function Search() {
     <div className="mr-3">
       <form className="relative">
         {show && (
-          <div class="relative">
-            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-              <IconLupa class="w-5 h-5 text-slate-400" />
+          <div className="relative">
+            <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+              <IconLupa className="w-5 h-5 text-slate-400" />
             </div>
             <input
               type="text"
-              class="block p-2 pl-10 pr-8 w-full text-sm text-slate-900 bg-white rounded-3xl outline-0 border border-slate-300"
+              className="block p-2 pl-10 pr-8 w-full text-sm text-slate-900 bg-white rounded-3xl outline-0 border border-slate-300"
               placeholder="Buscar..."
             />
           </div>
@@ -22,7 +22,7 @@ function Search() {
         {show ? (
           <button
             type="button"
-            class="text-slate-400 absolute inset-y-0 right-0 pr-3 hover:text-slate-600 transition-colors"
+            className="text-slate-400 absolute inset-y-0 right-0 pr-3 hover:text-slate-600 transition-colors"
             onClick={() => setShow(false)}
           >
             <svg
@@ -36,8 +36,12 @@ function Search() {
             </svg>
           </button>
         ) : (
-          <button type="button" onClick={() => setShow(true)} class="flex absolute inset-y-0 right-0 items-center pr-3">
-            <IconLupa class="w-5 h-5 hover:text-slate-400 transition-colors" />
+          <button
+            type="button"
+            onClick={() => setShow(true)}
+            className="flex absolute inset-y-0 right-0 items-center pr-3"
+          >
+            <IconLupa className="w-5 h-5 hover:text-slate-400 transition-colors" />
           </button>
         )}
       </form>
