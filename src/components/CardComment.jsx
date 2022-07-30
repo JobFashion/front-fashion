@@ -25,7 +25,7 @@ function CardComment({ active }) {
               <div className="pl-2 flex-1 flex flex-col w-full">
                 <div>
                   <Link to={`/profile/23423423`}>
-                    <h3 className="font-semibold text-sm bg-pink-400 bg-opacity-40 rounded-3xl px-1 inline-block">
+                    <h3 className="font-semibold text-sm bg-secondary-comentario rounded-3xl px-2 inline-block">
                       Maca-Ricnoll
                     </h3>
                   </Link>

@@ -78,9 +78,7 @@ function CommentItem({ item }) {
       <div className="pl-2 flex-1 flex flex-col w-full">
         <div>
           <Link to={`/profile/${item.postUserId}`}>
-            <h3 className="font-semibold text-sm bg-pink-400 bg-opacity-40 rounded-3xl px-1 inline-block">
-              {item.user.name}
-            </h3>
+            <h3 className="font-semibold text-sm bg-secondary-rosa rounded-3xl px-1 inline-block">{item.user.name}</h3>
           </Link>
           <small className="font-light text-xs ml-1">{item.createdAt}</small>
         </div>
